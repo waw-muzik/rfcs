@@ -22,8 +22,12 @@ An RFC goes through the following stages:
 * Submit a PR to the npm/rfcs repo
 
 # Implementing an RFC
+
 The author of an RFC is not obligated to implement it. Of course, the RFC author (like any other developer) is welcome to post an implementation for review after the RFC has been accepted.
 
-An active RFC should have the link to the implementation PR listed if there is one. Feedback to the actual implementation should be conducted in the implementation PR instead of the original RFC PR.
+An active RFC should have:
+* Implementation PR: the *link* to the implementation PR listed if there is one, so here, you will see if the implementation is in progress or finished.
+
+Feedback to the actual implementation should be conducted in the implementation PR instead of the original RFC PR.
 
 If you are interested in working on the implementation for an 'active' RFC, but cannot determine if someone else is already working on it, feel free to ask (e.g. by leaving a comment on the associated issue).
