@@ -49,7 +49,7 @@ What other designs have been considered? What is the impact of not doing this?
 # Adoption strategy
 
 If we implement this proposal, how will existing developers adopt it? Is
-this a breaking change? Can we write a codemod? Can we provide a runtime adapter library for the original API it replaces? How will this affect other projects in the Vue ecosystem?
+this a breaking change? How will this affect other WAW projects?
 
 # Unresolved questions
 
