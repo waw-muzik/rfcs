@@ -1,7 +1,7 @@
-- Start Date: (fill me in with today's date, 2020-05-22)
-- Target Major Version: (1.0.0)
-- Reference Issues: (fill in existing related issues, if any)
-- Implementation PR: (leave this empty)
+- Start Date: 2020-05-18
+- Target Major Version: 2.0.0
+- Reference Issues:
+- Implementation PR:
 
 # Summary
 
@@ -34,7 +34,3 @@ With the HTTP code, the API clients will know what's going on and with the inter
 # Adoption strategy
 
 If we implement this proposal, every developer must refactor any API response to the new way and including the belonging info/internal code
-
-# Unresolved questions
-
-?

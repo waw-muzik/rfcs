@@ -48,10 +48,9 @@ What other designs have been considered? What is the impact of not doing this?
 
 # Adoption strategy
 
-If we implement this proposal, how will existing Vue developers adopt it? Is
+If we implement this proposal, how will existing developers adopt it? Is
 this a breaking change? Can we write a codemod? Can we provide a runtime adapter library for the original API it replaces? How will this affect other projects in the Vue ecosystem?
 
 # Unresolved questions
 
-Optional, but suggested for first drafts. What parts of the design are still
-TBD?
+Optional, but suggested for first drafts. What parts of the design are still TBD (to be determinated)?
