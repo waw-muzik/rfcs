@@ -8,7 +8,7 @@
 - Implementation PR: (leave this empty)
 
 <!--- ** Required Section ** -->
-# Summar
+# Summart
 
 Brief explanation of the feature.
 
