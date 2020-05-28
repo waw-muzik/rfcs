@@ -40,7 +40,7 @@ Content-Type: application/vnd.wawmuzik.v1+json
 
 In backend, in our routers, we will need to check this header before do something in the ednpoint, so we will need to make a Factory that manage this behaviour.
 
-For now, requests that doesn't have this header, will be redirect to the first version of our API. This approach will be for now, because in the future, when we will remove this 1 version, requests that doesn't have this header, will be redirect to the lastest version
+For now, requests that don't have this header will be redirected to the first version of our API. This approach will be for now, because in the future, when we will remove this 1 version, requests that don't have this header, will be redirected to the latest version
 
 
 # Drawbacks
