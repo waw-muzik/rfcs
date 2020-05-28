@@ -5,11 +5,11 @@
 
 # Summary
 
-We want to use the same error tracker and exception manager in all of our microservices so will be very useful to manage it in the same way.
+We want to use the same error tracker and exception manager in all of our microservices so if will be very useful to manage it in the same way.
 
 # Basic example
 
-```
+```js
 const err = new WAWException({
   code: 'LOGIN_ERROR',
   message: 'There is an error trying to do login',
@@ -31,24 +31,24 @@ Managing all the exceptions as we want in a generic way, in addition to tracking
 
 # Detailed design
 
-Create a npm package called `@waw/exceptions` that export 3 methods
+Create a npm package called `@waw/exceptions` that exports 3 methods
 
-```
+```js
 export { WAWException, init, follow }
 ```
 
-The first thing, will by init the exception manager, like this
+The first thing, will be creating the exception running the `init` method of the exception manager, like this
 
-```
+```js
 init({
   apikey: ...,
   env: ...,
 });
 ```
 
-we can add the user data to, if we want to add some information related to the auth and user that generate this exception
+we can add the user data too, if we want to add some information related to the auth and user that generates this exception
 
-```
+```js
 follow({
   id: auth.user.id,
   email: auth.user.email,
@@ -56,9 +56,9 @@ follow({
 });
 ```
 
-and create and track the exception that we want
+and create and tracking the exception that we want
 
-```
+```js
 const err = new WAWException({
   code: 'LOGGIN_ERROR',
   message: 'There is an error trying to do login',
@@ -72,9 +72,9 @@ const err = new WAWException({
 err.track();
 
 throw err;
-`
+
 ```
 
 # Adoption strategy
 
-We will add semver versioning fot his package, so all developrs need to keep an eye on this, add it in our backend projects and adapt all exepctions and code to follow this package.
+We will add semver versioning for his package, so all developers need to keep an eye on this, add it in our backend projects and adapt all the exceptions and code to follow this package.
