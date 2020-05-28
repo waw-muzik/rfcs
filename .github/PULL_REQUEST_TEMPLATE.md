@@ -1,27 +1,67 @@
-<!--- GENERAL INSTRUCTIONS -->
-<!--- Remove the sections that not apply to your PR -->
-<!--- Remove the checkboxes not marked so we can identify finished PRs in the list at glance -->
-<!--- NOTE: Use Github labels to add tag in PR feature/fix/... -->
-## Related Task
-(Link to Jira task or add *Not related*)
+<!--- NOTE
+  * Remove sections that you don't need
+  * Fill required sections, please, it's very improtant to share the knowledge about the RFC
+-->
+- Start Date: (fill me in with today's date, YYYY-MM-DD)  <!--- ** Required ** -->
+- Target Major Version: (2.x / 3.x) <!--- ** Required ** -->
+- Reference Issues: (fill in existing related issues, if any)
+- Implementation PR: (leave this empty)
 
-## Description
-<!--- Why is this change required? What problem does it solve? -->
-<!--- If it fixes an open issue, please link to the issue here. -->
+<!--- ** Required Section ** -->
+# Summar
 
-## How to test it? Steps to test the Pull Request
+Brief explanation of the feature.
 
-### Checklist
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
-<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
-- [ ] My change requires a change to the documentation.
-- [ ] I have updated the documentation accordingly.
-- [ ] I have added tests to cover my changes.
-- [ ] QA team has been advised of the change.
-- [ ] I have modified or added translations.
+<!--- ** Required Section ** -->
+# Basic example
 
-## Screenshot or gif
-<!--- If your changes are UI related it's better to give context about them -->
+If the proposal involves a new or changed API, include a basic code example.
+Omit this section if it's not applicable.
 
-<!--- Random Gif -->
-<!--- Add some fun to the PR -->
+<!--- ** Required Section ** -->
+# Motivation
+
+Why are we doing this? What use cases does it support? What is the expected
+outcome?
+
+Please focus on explaining the motivation so that if this RFC is not accepted,
+the motivation could be used to develop alternative solutions. In other words,
+enumerate the constraints you are trying to solve without coupling them too
+closely to the solution you have in mind.
+
+<!--- ** Required Section ** -->
+# Detailed design
+
+This is the bulk of the RFC. Explain the design in enough detail for somebody
+familiar with Vue to understand, and for somebody familiar with the
+implementation to implement. This should get into specifics and corner-cases,
+and include examples of how the feature is used. Any new terminology should be
+defined here.
+
+<!--- ** Required Section ** -->
+# Drawbacks
+
+Why should we *not* do this? Please consider:
+
+- implementation cost, both in term of code size and complexity
+- whether the proposed feature can be implemented in user space
+- the impact on teaching people Vue
+- integration of this feature with other existing and planned features
+- cost of migrating existing Vue applications (is it a breaking change?)
+
+There are tradeoffs to choosing any path. Attempt to identify them here.
+
+<!--- ** Required Section ** -->
+# Alternatives
+
+What other designs have been considered? What is the impact of not doing this?
+
+<!--- ** Required Section ** -->
+# Adoption strategy
+
+If we implement this proposal, how will existing developers adopt it? Is
+this a breaking change? How will this affect other WAW projects?
+
+# Unresolved questions
+
+Optional, but suggested for first drafts. What parts of the design are still TBD (to be determinated)?
