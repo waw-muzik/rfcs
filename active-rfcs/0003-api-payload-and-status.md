@@ -5,7 +5,7 @@
 
 # Summary
 
-Currently in the legacy API there is no management of the API status codes, being 400, 200 and 500 the only errors that are returned. Specifically, clients that consume the API, when an error occurs, do not get more information than a 500 status code. The idea is to add more verbosity to the API and that it correctly uses the status codes by adding verbosity and semantics to responses.
+Currently in our legacy API we don't manage the status codes, being 400, 200 and 500 the only errors that are returned. Specifically, clients that consume the API, when an error occurs, do not get more information than a 500 status code. The idea is to add more verbosity to the API and that it correctly uses the status codes by adding verbosity and semantics to responses.
 
 # Basic example
 
@@ -29,7 +29,7 @@ By getting closer to the API Rest definition and using the HTTP status codes, we
 
 # Detailed design
 
-To add this new functionality, we need to review all the adonis services, so that they always return status codes with an established payload.
+To add this new functionality, we need to review all the adonis services, so they always return status codes with an established payload.
 
 We will use the status codes according to what is defined in [RFC7231](https://tools.ietf.org/html/rfc7231#section-6) and will be grouped into:
 
