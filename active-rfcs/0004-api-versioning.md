@@ -21,7 +21,7 @@ Content-Type: application/vnd.wawmuzik.v1+json
 
 # Motivation
 
-We want to improve our API and business logic adding more semantic data, performance,how we use the database, ..., In perder to avoid to break something, semantic versioning will be the best approach for this. For now, we will only use major versions, so that all clients will be using something like v1, v2, v3 ...
+We want to improve our API and business logic adding more semantic data, performance, how we use the database, ..., In order to avoid to break something, semantic versioning will be the best approach for this. For now, we will only use major versions, so all clients will be using something like v1, v2, v3 ...
 
 # Detailed design
 
