@@ -37,7 +37,7 @@ the response will come with this type of header:
 Content-Type: application/vnd.wawmuzik.v1+json
 ```
 
-In backend, in our routers, we will need to check this header before doing anything in the endpoint, so we will have to make a Factory that manages this behaviour.
+In the backend, in our routers, we will need to check this header before doing anything in the endpoint. This will be managed by a Factory, which must be implemented soon.
 
 For now, requests without this header will be redirected to the API's first version. This approach will be for now, for giving backward compatibility to the v1. When v1 becomes deprecated or gets removed, requests without this header will be redirected to the latest version
 
