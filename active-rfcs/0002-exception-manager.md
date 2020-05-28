@@ -9,7 +9,7 @@ We want to use the same error tracker and exception manager in all of our micros
 
 # Basic example
 
-```
+```js
 const err = new WAWException({
   code: 'LOGIN_ERROR',
   message: 'There is an error trying to do login',
@@ -33,13 +33,13 @@ Managing all the exceptions as we want in a generic way, in addition to tracking
 
 Create a npm package called `@waw/exceptions` that export 3 methods
 
-```
+```js
 export { WAWException, init, follow }
 ```
 
 The first thing, will by init the exception manager, like this
 
-```
+```js
 init({
   apikey: ...,
   env: ...,
@@ -48,7 +48,7 @@ init({
 
 we can add the user data to, if we want to add some information related to the auth and user that generate this exception
 
-```
+```js
 follow({
   id: auth.user.id,
   email: auth.user.email,
@@ -58,7 +58,7 @@ follow({
 
 and create and track the exception that we want
 
-```
+```js
 const err = new WAWException({
   code: 'LOGGIN_ERROR',
   message: 'There is an error trying to do login',
@@ -72,7 +72,7 @@ const err = new WAWException({
 err.track();
 
 throw err;
-`
+
 ```
 
 # Adoption strategy
