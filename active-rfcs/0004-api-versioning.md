@@ -5,8 +5,7 @@
 
 # Summary
 
-In order to improve our legacy API and code, we want to add or change some functionality that may cause client versions that consume our API to stop working. To solve this problem and add more functionalities without breaking anything, making the new clients (apps and websites) consume the new functionalities, we must add and manage different versions of our API.
-
+In order to improve our legacy API and code, we want to add or change some functionalities that may cause client versions that consume our API to stop working. To solve this problem and to add more functionalities without breaking anything, making the new clients (apps and websites) consume the new functionalities, we must add and manage different versions of our API.
 
 # Basic example
 
@@ -22,7 +21,7 @@ Content-Type: application/vnd.wawmuzik.v1+json
 
 # Motivation
 
-We want to improve our API and business logic adding more semantic data and improving a lot of things, for no break anything semantic versioning will the best approach for this. For now, we will only mayor versions, so all clients will be using something like v1, v2, v3 ...
+We want to improve our API and business logic adding more semantic data, performance,how we use the database, ..., In perder to avoid to break something, semantic versioning will be the best approach for this. For now, we will only use major versions, so that all clients will be using something like v1, v2, v3 ...
 
 # Detailed design
 
@@ -32,16 +31,15 @@ We will manage our API through semantic versioning, being the client who defines
 curl -i -H " Accept: application/vnd.wawmuzik.v1+json" -H "Content-Type: application/json" http://app.wawmuzik.com/auth/login
 ```
 
-the response will be come with this type of header:
+the response will come with this type of header:
 
 ```bash
 Content-Type: application/vnd.wawmuzik.v1+json
 ```
 
-In backend, in our routers, we will need to check this header before do something in the ednpoint, so we will need to make a Factory that manage this behaviour.
+In backend, in our routers, we will need to check this header before doing anything in the endpoint, so we will have to make a Factory that manages this behaviour.
 
-For now, requests that don't have this header will be redirected to the first version of our API. This approach will be for now, because in the future, when we will remove this 1 version, requests that don't have this header, will be redirected to the latest version
-
+For now, requests that don't have this header will be redirected to the first version of our API. This approach will be for now, because in the future, when we will remove this 1 version, requests that don't have this header will be redirected to the lastest version
 
 # Drawbacks
 
@@ -49,17 +47,17 @@ We will need to put time to do this and test that this works well. We need to ad
 
 # Alternatives
 
-We considered to use API versioning in a different way, for example:
+We considered to use API versioning in different ways, for example:
 
-* Use version in path, like this `/api/v1/auth/me`: the problem with this comes that we will need to rewrite the whole api to use this new endpoint, and we will break hyper medias in our clients.
+* Use version in path, like this `/api/v1/auth/me`: the problem with this os that we will need to rewrite the whole api to use this new endpoint, and we will break hyper medias in our clients.
 
 * Custom header, like `X-version: 1.0`: This will be good too, but the accept and content-type work
-Thinking in a future, use versioning in a header will be good to work with micro-services
+Thinking in a future, using versioning in a header will be good to work with micro-services
 
 # Adoption strategy
 
-This is a breaking change so will be available since version 2 of the API, and all clients need to be use it since we publish it.
+This is a breaking change so it will be available since version 2 of the API, and all the clients need to use it since we publish it.
 
 # Unresolved questions
 
-How we will update the old clients and inform them that they need to update the apps? With push notifications? SMS? ...
+How will we update the old clients and inform them that they need to update the apps? With push notifications? SMS? ...

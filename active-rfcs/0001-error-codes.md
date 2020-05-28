@@ -11,7 +11,7 @@ Use Twitter docs as an example: https://developer.twitter.com/en/docs/basics/res
 
 # Basic example
 
-If the API returns a 404, give a more extensive info to our system (logs, apps, admin panel, partners) with a code and a message, like:
+If the API returns a 404, give more extensive info to our system (logs, apps, admin panel, partners) with a code and a message, like:
 
 * WM0001 - User not found - HTTP 404
 * WM0002 - Artist not found - HTTP 404
@@ -19,9 +19,9 @@ If the API returns a 404, give a more extensive info to our system (logs, apps, 
 
 # Motivation
 
-The main need is to have well documented any error/message returned by the API. Create a defined structure and a model for these error messages, gives the code consistency and makes easy the development job (and also error tracking).
+The main need is to have well documented every error/message returned by the API. Creating a defined structure and a model for these error messages, gives the code consistency and makes the development job easy (and also error tracking).
 
-With the HTTP code, the API clients will know what's going on and with the internal code, could have a detailed info of the given message.
+With the HTTP code, the API clients will know what's going on and with the internal code, will have detailed info of the given message.
 
 # Detailed design
 
@@ -33,4 +33,4 @@ With the HTTP code, the API clients will know what's going on and with the inter
 
 # Adoption strategy
 
-If we implement this proposal, every developer must refactor any API response to the new way and including the belonging info/internal code
+If we implement this proposal, every developer will have to refactor every API response to the new way and include the belonging info/internal code
