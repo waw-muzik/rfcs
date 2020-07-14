@@ -1,5 +1,6 @@
 - Start Date: 2020-05-28
-- Target Major Version: 2.0.0
+- Revision Date: 2020-07-14
+- Target Major Version: 1.0.0
 - Reference Issues:
 - Implementation PR:
 
@@ -16,7 +17,7 @@ curl -i -H " Accept: application/vnd.wawmuzik.v1+json" -H "Content-Type: applica
 and the API will send a response with this header:
 
 ```bash
-Content-Type: application/vnd.wawmuzik.v1+json
+Accept: application/vnd.wawmuzik.v1+json
 ```
 
 # Motivation
@@ -34,7 +35,7 @@ curl -i -H " Accept: application/vnd.wawmuzik.v1+json" -H "Content-Type: applica
 the response will come with this type of header:
 
 ```bash
-Content-Type: application/vnd.wawmuzik.v1+json
+Accept: application/vnd.wawmuzik.v1+json
 ```
 
 In the backend, in our routers, we will need to check this header before doing anything in the endpoint. This will be managed by a Factory, which must be implemented soon.
