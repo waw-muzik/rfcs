@@ -12,12 +12,30 @@ We want to use the same error tracker and exception manager in all of our micros
 ```js
 const err = new WAWException({
   code: 'LOGIN_ERROR',
-  message: 'There is an error trying to do login',
-  error: {
-    stack: err.stack,
-    message: err.message
+  info: [
+    {
+      title: 'info field 1',
+      data: Object
+    },
+    {
+      title: 'info field 2',
+      data: Object2
+    }
+  ],
+  userData: {
+    id: user.id,
+    email: user.email,
+    username: user.username
   },
-  additionalData: moreData
+  tags: [
+    {
+      key: 'key 1',
+      value: 'value 1'
+    }
+  ],
+  exception,
+  severity,
+  headers
 });
 
 err.track();
@@ -56,17 +74,35 @@ follow({
 });
 ```
 
-and create and tracking the exception that we want
+and create and track the exception that we want
 
 ```js
 const err = new WAWException({
-  code: 'LOGGIN_ERROR',
-  message: 'There is an error trying to do login',
-  error: {
-    stack: err.stack,
-    message: err.message
+  code: 'LOGIN_ERROR',
+  info: [
+    {
+      title: 'info field 1',
+      data: Object
+    },
+    {
+      title: 'info field 2',
+      data: Object2
+    }
+  ],
+  userData: {
+    id: user.id,
+    email: user.email,
+    username: user.username
   },
-  additionalData: moreData
+  tags: [
+    {
+      key: 'key 1',
+      value: 'value 1'
+    }
+  ],
+  exception,
+  severity,
+  headers
 });
 
 err.track();
@@ -77,4 +113,4 @@ throw err;
 
 # Adoption strategy
 
-We will add semver versioning for his package, so all developers need to keep an eye on this, add it in our backend projects and adapt all the exceptions and code to follow this package.
+We will add semantic versioning for this package, so all developers need to keep an eye on this, add it in our backend projects and adapt all the exceptions and code to follow this package.
