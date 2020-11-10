@@ -1,3 +1,2 @@
-<!--- ** Required Section ** -->
 ## Description
-<!--- Add some information about this Pull request -->
+<!--- Add  a brief explanation of the pull request -->

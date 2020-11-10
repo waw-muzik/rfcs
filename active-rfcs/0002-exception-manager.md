@@ -1,7 +1,7 @@
 - Start Date:2020-05-20
-- Target Major Version: 2.0.0
-- Reference Issues:
-- Implementation PR:
+- Revision Date: 2020-11-10
+- Target Major Version: 2.0
+- Reference Issues: *None*
 
 # Summary
 
@@ -111,6 +111,22 @@ throw err;
 
 ```
 
+# Drawbacks
+
+*Nothing at this moment*
+
+# Alternatives
+
+*Not related*
+
 # Adoption strategy
 
 We will add semantic versioning for this package, so all developers need to keep an eye on this, add it in our backend projects and adapt all the exceptions and code to follow this package.
+
+# Unresolved questions
+
+*Nothing at this moment*
+
+# References
+
+*Not related*

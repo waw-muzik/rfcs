@@ -1,7 +1,7 @@
 - Start Date: 2020-05-18
-- Target Major Version: 2.0.0
-- Reference Issues:
-- Implementation PR:
+- Revision Date: 2020-11-10
+- Target Major Version: 2.0
+- Reference Issues: *None*
 
 # Summary
 
@@ -31,6 +31,23 @@ With the HTTP code, the API clients will know what's going on and with the inter
 |404|   |WM0002|   |Lorem ipsum lorem ipsum dolor sumun cafetasum|
 |404|   |WM0003|   |Lorem ipsum lorem ipsum dolor sumun cafetasum|
 
+# Drawbacks
+
+The main problem will be maintain all this codes in a future because the code list will be growth and we need to maintain it without duplicates
+
+# Alternatives
+
+*Nothing at this moment*
+
 # Adoption strategy
 
 If we implement this proposal, every developer will have to refactor every API response to the new way and include the belonging info/internal code
+
+# Unresolved questions
+
+*Nothing at this moment*
+
+# References
+
+* JSON API: https://jsonapi.org/format/1.1/#error-objects
+* Twitter Error Codes: https://developer.twitter.com/en/support/twitter-api/error-troubleshooting#error-codes
