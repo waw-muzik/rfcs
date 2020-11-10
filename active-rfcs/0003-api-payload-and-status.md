@@ -1,7 +1,7 @@
 - Start Date: 2020-05-28
-- Target Major Version: 2.0.0
-- Reference Issues:
-- Implementation PR:
+- Revision Date: 2020-11-10
+- Target Major Version: 2.0
+- Reference Issues: [#19](https://github.com/waw-muzik/rfcs/issues/19)
 
 # Summary
 
@@ -14,7 +14,7 @@ Currently in our legacy API we don't manage the status codes, being 400, 200 and
     return response
       .status(422)
       .json({
-        error: true,
+        error: false,
         data: {
           code: 'PARAM_REQUIRED',
           mesage: 'Phone number is required'
@@ -45,7 +45,7 @@ Payload for success responses:
   return response
     .status(200)
     .json({
-      error: true,
+      error: false,
       data: {
         ...follow the structure that this endpoint need
       }
@@ -59,10 +59,20 @@ and payload for error responses
     .status(422)
     .json({
       error: true,
-      data: {
-        code: 'PARAM_REQUIRED',
-        mesage: 'Phone number is required'
-      }
+      errors: [
+        {
+          code: "PARAM_REQUIRED",
+          detail: "Phone number is required"
+        },
+        {
+          code: "RANDOM_ERROR",
+          detail: "More information related to this error"
+        },
+        {
+          code: "ANOTHER_ERROR",
+          detail: "More information related to this error"
+        }
+      ]
     });
 ```
 
@@ -78,7 +88,13 @@ Although it has been considered to maintain the way in which our API works curre
 
 We will add this update to a new major version following semver versioning, so all developers need to keep an eye on this, add it in our backend projects and adapt all exceptions and code to follow this package.
 
-
 # Unresolved questions
 
 The only management that does not remain is how we are going to manage the API versioning. This question will be resolved in another RFC.
+
+# References
+
+* Status Codes on IETF: https://tools.ietf.org/html/rfc7231#section-6
+* HTTP Status Codes: https://httpstatuses.com/
+* JSON API: https://jsonapi.org/format/#errors
+  * Example JSON API: https://jsonapi.org/examples/#error-objects-error-codes

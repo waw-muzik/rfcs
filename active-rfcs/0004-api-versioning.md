@@ -1,8 +1,7 @@
 - Start Date: 2020-05-28
-- Revision Date: 2020-07-14
-- Target Major Version: 1.0.0
-- Reference Issues:
-- Implementation PR:
+- Revision Date: 2020-11-10
+- Target Major Version: 2.0
+- Reference Issues: *None*
 
 # Summary
 
@@ -62,3 +61,9 @@ This is a breaking change so it will be available since version 2 of the API, an
 # Unresolved questions
 
 How will we update the old clients and inform them that they need to update the apps? With push notifications? SMS? ...
+
+# References
+
+* APIS you wont hate: https://apisyouwonthate.com/blog/api-versioning-has-no-right-way
+* FreeCodeCamp: https://www.freecodecamp.org/news/how-to-version-a-rest-api/
+* Restful API: https://restfulapi.net/versioning/

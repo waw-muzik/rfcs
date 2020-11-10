@@ -1,24 +1,20 @@
 <!--- NOTE
-  * Remove sections that you don't need
-  * Fill required sections, please, it's very improtant to share the knowledge about the RFC
+  * Are sections are required, please, it's very improtant to share the knowledge about the RFC
 -->
-- Start Date: (fill me in with today's date, YYYY-MM-DD)  <!--- ** Required ** -->
-- Target Major Version: (2.x / 3.x) <!--- ** Required ** -->
-- Reference Issues: (fill in existing related issues, if any)
-- Implementation PR: (leave this empty)
+- Start Date: (fill me in with today's date, YYYY-MM-DD)
+- Revision Date: (fill me in with today's date, YYYY-MM-DD)
+- Target Major Version: (2.x / 3.x)
+- Reference Issues: (fill in existing related issues, if not put *None*)
 
-<!--- ** Required Section ** -->
 # Summary
 
 Brief explanation of the feature.
 
-<!--- ** Required Section ** -->
 # Basic example
 
 If the proposal involves a new or changed API, include a basic code example.
 Omit this section if it's not applicable.
 
-<!--- ** Required Section ** -->
 # Motivation
 
 Why are we doing this? What use cases does it support? What is the expected
@@ -29,7 +25,6 @@ the motivation could be used to develop alternative solutions. In other words,
 enumerate the constraints you are trying to solve without coupling them too
 closely to the solution you have in mind.
 
-<!--- ** Required Section ** -->
 # Detailed design
 
 This is the bulk of the RFC. Explain the design in enough detail for somebody
@@ -38,7 +33,6 @@ implementation to implement. This should get into specifics and corner-cases,
 and include examples of how the feature is used. Any new terminology should be
 defined here.
 
-<!--- ** Required Section ** -->
 # Drawbacks
 
 Why should we *not* do this? Please consider:
@@ -51,12 +45,12 @@ Why should we *not* do this? Please consider:
 
 There are tradeoffs to choosing any path. Attempt to identify them here.
 
-<!--- ** Required Section ** -->
+If not, add *Nothing at this moment*
+
 # Alternatives
 
-What other designs have been considered? What is the impact of not doing this?
+What other designs have been considered? What is the impact of not doing this? or add *Not related*
 
-<!--- ** Required Section ** -->
 # Adoption strategy
 
 If we implement this proposal, how will existing developers adopt it? Is
@@ -64,4 +58,8 @@ this a breaking change? How will this affect other WAW projects?
 
 # Unresolved questions
 
-Optional, but suggested for first drafts. What parts of the design are still TBD (to be determinated)?
+Optional, but suggested for first drafts. What parts of the design are still TBD (to be determinated)? Or add *Nothing at this moment*
+
+# References
+
+Add urls, blog posts or resources related to this RFC or add *Not related*
