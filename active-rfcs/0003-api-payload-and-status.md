@@ -1,7 +1,7 @@
 - Start Date: 2020-05-28
 - Revision Date: 2020-11-10
 - Target Major Version: 2.0
-- Reference Issues: *None*
+- Reference Issues: [#19](https://github.com/waw-muzik/rfcs/issues/19)
 
 # Summary
 
