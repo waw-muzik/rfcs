@@ -1,5 +1,5 @@
 - Start Date: 2020-05-28
-- Revision Date: 2020-11-10
+- Revision Date: 2021-01-15
 - Target Major Version: 2.0
 - Reference Issues: [#19](https://github.com/waw-muzik/rfcs/issues/19)
 
@@ -12,13 +12,34 @@ Currently in our legacy API we don't manage the status codes, being 400, 200 and
 ```javascript
  if (!phone_number) {
     return response
-      .status(422)
+      .status(200)
       .json({
         error: false,
         data: {
-          code: 'PARAM_REQUIRED',
-          mesage: 'Phone number is required'
+          type: 'users',
+          id: 10,
+          attributes: {
+            user: 'test'
+          }
         }
+      });
+  }
+```
+And with errors: 
+
+```javascript
+ if (!phone_number) {
+    return response
+      .status(422)
+      .json({
+        error: true,
+        errors: [
+          {
+            code: "PARAM_REQUIRED",
+            status: "422",
+            detail: "Phone number is required"
+          }
+        ]
       });
   }
 ```
@@ -47,12 +68,46 @@ Payload for success responses:
     .json({
       error: false,
       data: {
+        id: 569394,
+        type: 'users',
+        attributes: {
+          user: 'test'
+        }
         ...follow the structure that this endpoint need
       }
     });
 ```
 
-and payload for error responses
+Payload for a success response with a list of results:
+
+
+```javascript
+  return response
+    .status(200)
+    .json({
+      error: false,
+      data: [
+        {
+          id: 569394,
+          type: 'users',
+          attributes: {
+            user: 'test'
+          }
+          ...follow the structure that this endpoint need
+        },
+        {
+          id: 3247,
+          type: 'users',
+          attributes: {
+            user: 'other'
+          }
+          ...follow the structure that this endpoint need
+        }
+      ]
+    });
+```
+
+Payload for error responses
 
 ```javascript
   return response
@@ -62,14 +117,17 @@ and payload for error responses
       errors: [
         {
           code: "PARAM_REQUIRED",
+          status: "422",
           detail: "Phone number is required"
         },
         {
           code: "RANDOM_ERROR",
+          status: "422",
           detail: "More information related to this error"
         },
         {
           code: "ANOTHER_ERROR",
+          status: "422",
           detail: "More information related to this error"
         }
       ]
