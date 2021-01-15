@@ -25,7 +25,7 @@ Currently in our legacy API we don't manage the status codes, being 400, 200 and
       });
   }
 ```
-And with errors: 
+And with errors:
 
 ```javascript
  if (!phone_number) {
